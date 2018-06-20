@@ -1,0 +1,4 @@
+package hashmaps.generated;
+public class HashMapsState_ScalaMutableHashMapThread_jmhType extends HashMapsState_ScalaMutableHashMapThread_jmhType_B3 {
+}
+

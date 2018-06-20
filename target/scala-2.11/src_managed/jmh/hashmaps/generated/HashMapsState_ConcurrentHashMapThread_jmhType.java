@@ -1,0 +1,4 @@
+package hashmaps.generated;
+public class HashMapsState_ConcurrentHashMapThread_jmhType extends HashMapsState_ConcurrentHashMapThread_jmhType_B3 {
+}
+
