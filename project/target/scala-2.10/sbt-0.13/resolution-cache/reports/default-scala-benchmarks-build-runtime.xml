@@ -9,54 +9,54 @@
 		extra-sbtVersion="0.13"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20180619213131"/>
+		date="20180626140104"/>
 	<dependencies>
 		<module organisation="pl.project13.scala" name="sbt-jmh">
-			<revision name="0.3.3" status="release" pubdate="20180123232731" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="true" searched="true" default="false" conf="compile, default(compile)" position="1">
+			<revision name="0.3.3" status="release" pubdate="20180123232731" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="2041" time="13105" location="/Users/ekalashnikov/.ivy2/cache/scala_2.10/sbt_0.13/pl.project13.scala/sbt-jmh/ivy-0.3.3.xml" searched="true" original-local-location="/Users/ekalashnikov/.ivy2/cache/scala_2.10/sbt_0.13/pl.project13.scala/sbt-jmh/ivy-0.3.3.xml.original" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/pl.project13.scala/sbt-jmh/scala_2.10/sbt_0.13/0.3.3/ivys/ivy.xml"/>
+				<metadata-artifact status="no" details="" size="2041" time="0" location="/Users/ekalashnikov/.ivy2/cache/scala_2.10/sbt_0.13/pl.project13.scala/sbt-jmh/ivy-0.3.3.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/pl.project13.scala/sbt-jmh/scala_2.10/sbt_0.13/0.3.3/ivys/ivy.xml"/>
 				<caller organisation="default" name="scala-benchmarks-build" conf="compile, runtime" rev="0.3.3" rev-constraint-default="0.3.3" rev-constraint-dynamic="0.3.3" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
-					<artifact name="sbt-jmh" type="jar" ext="jar" status="successful" details="" size="32104" time="16853" location="/Users/ekalashnikov/.ivy2/cache/scala_2.10/sbt_0.13/pl.project13.scala/sbt-jmh/jars/sbt-jmh-0.3.3.jar">
+					<artifact name="sbt-jmh" type="jar" ext="jar" status="no" details="" size="32104" time="0" location="/Users/ekalashnikov/.ivy2/cache/scala_2.10/sbt_0.13/pl.project13.scala/sbt-jmh/jars/sbt-jmh-0.3.3.jar">
 						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/pl.project13.scala/sbt-jmh/scala_2.10/sbt_0.13/0.3.3/jars/sbt-jmh.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="pl.project13.scala" name="sbt-jmh-extras">
-			<revision name="0.3.3" status="release" pubdate="20180123212316" resolver="public" artresolver="public" homepage="https://github.com/ktoso/sbt-jmh" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="2">
+			<revision name="0.3.3" status="release" pubdate="20180123212316" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/ktoso/sbt-jmh" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="2">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="2123" time="1007" location="/Users/ekalashnikov/.ivy2/cache/pl.project13.scala/sbt-jmh-extras/ivy-0.3.3.xml" searched="true" original-local-location="/Users/ekalashnikov/.ivy2/cache/pl.project13.scala/sbt-jmh-extras/ivy-0.3.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/pl/project13/scala/sbt-jmh-extras/0.3.3/sbt-jmh-extras-0.3.3.pom"/>
+				<metadata-artifact status="no" details="" size="3525" time="0" location="/Users/ekalashnikov/.ivy2/cache/pl.project13.scala/sbt-jmh-extras/ivy-0.3.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/pl/project13/scala/sbt-jmh-extras/0.3.3/sbt-jmh-extras-0.3.3.pom"/>
 				<caller organisation="pl.project13.scala" name="sbt-jmh" conf="compile" rev="0.3.3" rev-constraint-default="0.3.3" rev-constraint-dynamic="0.3.3" callerrev="0.3.3"/>
 				<artifacts>
-					<artifact name="sbt-jmh-extras" type="jar" ext="jar" status="successful" details="" size="20433" time="1945" location="/Users/ekalashnikov/.ivy2/cache/pl.project13.scala/sbt-jmh-extras/jars/sbt-jmh-extras-0.3.3.jar">
+					<artifact name="sbt-jmh-extras" type="jar" ext="jar" status="no" details="" size="20433" time="0" location="/Users/ekalashnikov/.ivy2/cache/pl.project13.scala/sbt-jmh-extras/jars/sbt-jmh-extras-0.3.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/pl/project13/scala/sbt-jmh-extras/0.3.3/sbt-jmh-extras-0.3.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.openjdk.jmh" name="jmh-generator-bytecode">
-			<revision name="1.20" status="release" pubdate="20180123155207" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="6">
+			<revision name="1.20" status="release" pubdate="20180123155207" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="6">
 				<license name="GNU General Public License (GPL), version 2, with the Classpath exception" url="http://openjdk.java.net/legal/gplv2+ce.html"/>
-				<metadata-artifact status="successful" details="" size="5241" time="924" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-bytecode/ivy-1.20.xml" searched="true" original-local-location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-bytecode/ivy-1.20.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-bytecode/1.20/jmh-generator-bytecode-1.20.pom"/>
+				<metadata-artifact status="no" details="" size="4423" time="0" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-bytecode/ivy-1.20.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-bytecode/1.20/jmh-generator-bytecode-1.20.pom"/>
 				<caller organisation="pl.project13.scala" name="sbt-jmh-extras" conf="default, compile, runtime, master" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="0.3.3"/>
 				<caller organisation="pl.project13.scala" name="sbt-jmh" conf="compile" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="0.3.3"/>
 				<artifacts>
-					<artifact name="jmh-generator-bytecode" type="jar" ext="jar" status="successful" details="" size="18519" time="1225" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-bytecode/jars/jmh-generator-bytecode-1.20.jar">
+					<artifact name="jmh-generator-bytecode" type="jar" ext="jar" status="no" details="" size="18519" time="0" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-bytecode/jars/jmh-generator-bytecode-1.20.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-bytecode/1.20/jmh-generator-bytecode-1.20.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.openjdk.jmh" name="jmh-generator-asm">
-			<revision name="1.20" status="release" pubdate="20180123154857" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="8">
+			<revision name="1.20" status="release" pubdate="20180123154857" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="8">
 				<license name="GNU General Public License (GPL), version 2, with the Classpath exception" url="http://openjdk.java.net/legal/gplv2+ce.html"/>
-				<metadata-artifact status="successful" details="" size="4146" time="994" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-asm/ivy-1.20.xml" searched="true" original-local-location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-asm/ivy-1.20.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-asm/1.20/jmh-generator-asm-1.20.pom"/>
+				<metadata-artifact status="no" details="" size="4351" time="0" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-asm/ivy-1.20.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-asm/1.20/jmh-generator-asm-1.20.pom"/>
 				<caller organisation="org.openjdk.jmh" name="jmh-generator-bytecode" conf="compile, runtime" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="1.20"/>
 				<caller organisation="pl.project13.scala" name="sbt-jmh-extras" conf="default, compile, runtime, master" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="0.3.3"/>
 				<caller organisation="pl.project13.scala" name="sbt-jmh" conf="compile" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="0.3.3"/>
 				<artifacts>
-					<artifact name="jmh-generator-asm" type="jar" ext="jar" status="successful" details="" size="31542" time="1226" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-asm/jars/jmh-generator-asm-1.20.jar">
+					<artifact name="jmh-generator-asm" type="jar" ext="jar" status="no" details="" size="31542" time="0" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-asm/jars/jmh-generator-asm-1.20.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-asm/1.20/jmh-generator-asm-1.20.jar"/>
 					</artifact>
 				</artifacts>
@@ -75,31 +75,31 @@
 			</revision>
 		</module>
 		<module organisation="org.openjdk.jmh" name="jmh-generator-reflection">
-			<revision name="1.20" status="release" pubdate="20180123154826" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="7">
+			<revision name="1.20" status="release" pubdate="20180123154826" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="7">
 				<license name="GNU General Public License (GPL), version 2, with the Classpath exception" url="http://openjdk.java.net/legal/gplv2+ce.html"/>
-				<metadata-artifact status="successful" details="" size="3815" time="1231" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-reflection/ivy-1.20.xml" searched="true" original-local-location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-reflection/ivy-1.20.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-reflection/1.20/jmh-generator-reflection-1.20.pom"/>
+				<metadata-artifact status="no" details="" size="4060" time="0" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-reflection/ivy-1.20.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-reflection/1.20/jmh-generator-reflection-1.20.pom"/>
 				<caller organisation="org.openjdk.jmh" name="jmh-generator-bytecode" conf="compile, runtime" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="1.20"/>
 				<caller organisation="org.openjdk.jmh" name="jmh-generator-asm" conf="compile, runtime" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="1.20"/>
 				<caller organisation="pl.project13.scala" name="sbt-jmh-extras" conf="default, compile, runtime, master" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="0.3.3"/>
 				<caller organisation="pl.project13.scala" name="sbt-jmh" conf="compile" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="0.3.3"/>
 				<artifacts>
-					<artifact name="jmh-generator-reflection" type="jar" ext="jar" status="successful" details="" size="24287" time="1227" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-reflection/jars/jmh-generator-reflection-1.20.jar">
+					<artifact name="jmh-generator-reflection" type="jar" ext="jar" status="no" details="" size="24287" time="0" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-generator-reflection/jars/jmh-generator-reflection-1.20.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-generator-reflection/1.20/jmh-generator-reflection-1.20.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.openjdk.jmh" name="jmh-core">
-			<revision name="1.20" status="release" pubdate="20180123154526" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="3">
+			<revision name="1.20" status="release" pubdate="20180123154526" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="3">
 				<license name="GNU General Public License (GPL), version 2, with the Classpath exception" url="http://openjdk.java.net/legal/gplv2+ce.html"/>
-				<metadata-artifact status="successful" details="" size="9413" time="921" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-core/ivy-1.20.xml" searched="true" original-local-location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-core/ivy-1.20.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-core/1.20/jmh-core-1.20.pom"/>
+				<metadata-artifact status="no" details="" size="4632" time="0" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-core/ivy-1.20.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-core/1.20/jmh-core-1.20.pom"/>
 				<caller organisation="org.openjdk.jmh" name="jmh-generator-bytecode" conf="compile, runtime" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="1.20"/>
 				<caller organisation="org.openjdk.jmh" name="jmh-generator-asm" conf="compile, runtime" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="1.20"/>
 				<caller organisation="org.openjdk.jmh" name="jmh-generator-reflection" conf="compile, runtime" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="1.20"/>
 				<caller organisation="pl.project13.scala" name="sbt-jmh-extras" conf="default, compile, runtime, master" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="0.3.3"/>
 				<caller organisation="pl.project13.scala" name="sbt-jmh" conf="compile" rev="1.20" rev-constraint-default="1.20" rev-constraint-dynamic="1.20" callerrev="0.3.3"/>
 				<artifacts>
-					<artifact name="jmh-core" type="jar" ext="jar" status="successful" details="" size="510285" time="3075" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-core/jars/jmh-core-1.20.jar">
+					<artifact name="jmh-core" type="jar" ext="jar" status="no" details="" size="510285" time="0" location="/Users/ekalashnikov/.ivy2/cache/org.openjdk.jmh/jmh-core/jars/jmh-core-1.20.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-core/1.20/jmh-core-1.20.jar"/>
 					</artifact>
 				</artifacts>
@@ -130,7 +130,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-sbt" name="global-plugins">
-			<revision name="0.0" status="integration" pubdate="20180619213129" resolver="inter-project" artresolver="inter-project" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
+			<revision name="0.0" status="integration" pubdate="20180626140102" resolver="inter-project" artresolver="inter-project" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="default" name="scala-benchmarks-build" conf="compile, runtime" rev="0.0" rev-constraint-default="0.0" rev-constraint-dynamic="0.0" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
