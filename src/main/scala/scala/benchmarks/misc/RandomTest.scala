@@ -2,7 +2,7 @@ package scala.benchmarks.misc
 
 import java.util.concurrent.TimeUnit
 
-import org.openjdk.jmh.annotations.{Benchmark, OutputTimeUnit, Scope, State}
+import org.openjdk.jmh.annotations._
 
 import scala.benchmarks.misc.RandomTestState.{StateWithJavaRandom, StateWithScalaRandom}
 import scala.util.Random
@@ -19,6 +19,7 @@ object RandomTestState {
   }
 }
 
+@BenchmarkMode(Array(Mode.AverageTime))
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 class RandomTest {
   @Benchmark
