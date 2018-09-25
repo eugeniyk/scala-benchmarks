@@ -1,8 +1,9 @@
 package scala.benchmarks.hashmaps
 
-import java.util.concurrent.TimeUnit
+import java.util.concurrent.{ThreadLocalRandom, TimeUnit}
 
 import org.openjdk.jmh.annotations._
+import org.openjdk.jmh.infra.Blackhole
 
 import scala.benchmarks.hashmaps.HashMapsState.ConcurrentHashMapThread
 

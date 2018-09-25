@@ -18,7 +18,7 @@ object HashMapsState {
     }
 
     val mapFunc = new java.util.function.Function[String, String] {
-      override def apply(t: String): String = "value0"
+      override def apply(t: String): String = t
     }
   }
 
