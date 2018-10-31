@@ -8,8 +8,8 @@ import org.openjdk.jmh.annotations.{Scope, State}
 import scala.collection.mutable
 
 object HashMapsState {
-  @State(Scope.Thread)
-  class ConcurrentHashMapThread {
+  @State(Scope.Benchmark)
+  class ConcurrentHashMapBenchmark {
     val map1 = new ConcurrentHashMap[String, String](1000, 0.9f, 1)
     val map16 = new ConcurrentHashMap[String, String]()
     for (i <- 1 to 1000) {
@@ -22,24 +22,24 @@ object HashMapsState {
     }
   }
 
-  @State(Scope.Thread)
-  class JavaHashMapThread {
+  @State(Scope.Benchmark)
+  class JavaHashMapBenchmark {
     val map = new util.HashMap[String, String]()
     for (i <- 1 to 1000) {
       map.put("key" + i, "value" + i)
     }
   }
 
-  @State(Scope.Thread)
-  class ScalaMutableHashMapThread {
+  @State(Scope.Benchmark)
+  class ScalaMutableHashMapBenchmark {
     val map = new mutable.HashMap[String, String]()
     for (i <- 1 to 1000) {
       map.put("key" + i, "value" + i)
     }
   }
 
-  @State(Scope.Thread)
-  class ScalaImmutableHashMapThread {
+  @State(Scope.Benchmark)
+  class ScalaImmutableHashMapBenchmark {
     val map: Map[String, String] = (1 to 1000).map(i => s"key$i" -> s"value$i").toMap
   }
 }
