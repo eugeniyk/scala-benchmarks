@@ -135,6 +135,45 @@ class XmlBuilderTest {
     sb
   }
 
+  private def javaAppendXML(state: Data) = {
+    appendXML(
+      """<ns1:AbcdefghData xmlns:ns1="http://Abc1234567abcd.xbtterwg.xv">""",
+      s"<ns1:abc1234512345678910>",
+      s"<ns1:assdgf>",
+      s"<ns1:b1234>",
+      s"<source>ABCDEFG_ABC</source>",
+      s"<abcdefSource>${state.xml.field13}</abcdefSource>",
+      s"<ns1:abcedfg>${if (state.xml.field2) 1 else 0}</ns1:abcedfg>",
+      s"<ns1:abcde_123567>ABCDEF_ABC</ns1:abcde_123567>",
+      s"<ns1:abcde_12>${state.xml.field4}</ns1:abcde_12>",
+      s"<ns1:abcde123456_12345>",
+      s"<ns1:abc123>${state.xml.field6}</ns1:abc123>",
+      s"<ns1:abc12>${"%.2f".format(state.xml.field5)}</ns1:abc12>",
+      s"</ns1:abcde123456_12345>",
+      s"<ns1:ab_1234>${state.xml.field8}</ns1:ab_1234>",
+      s"<ns1:abcdefg_1234>${state.xml.field9}</ns1:abcdefg_1234>",
+      s"<ns1:abcdefgh_1234>${state.xml.field10}</ns1:abcdefgh_1234>",
+      s"<ns1:abcde12_1234>${state.xml.field11}</ns1:abcde12_1234>",
+      s"<ns1:abcd00>${state.xml.field3}</ns1:abcd00>",
+      s"<ns1:abcs00>${state.xml.field7}</ns1:abcs00>",
+      s"<ns1:zcxaa_abc12>${"%.2f".format(state.xml.field12)}</ns1:zcxaa_abc12>",
+      if (state.xml.field14.isDefined) s"<ns1:abc_1234_12345_123>${state.xml.field14.get}</ns1:abc_1234_12345_123>" else "",
+      s"</ns1:b1234>",
+      s"<ns1:abcde_fg>${state.xml.field1}</ns1:abcde_fg>",
+      s"</ns1:assdgf>",
+      s"</ns1:abc1234512345678910>",
+      s"</ns1:Abc12345678>",
+      s"</ns1:AbcdefghData>"
+    )
+  }
+
+  private def appendXML(xmls: String*): String = {
+    val length = xmls.foldLeft(0)((acc, xml) => acc + xml.length)
+    val sb = new java.lang.StringBuilder(length)
+    xmls.foreach(sb.append)
+    sb.toString
+  }
+
   private def appendJava(sb: java.lang.StringBuilder, state: Data) = {
     sb
       .append("""<ns1:AbcdefghData xmlns:ns1="http://Abc1234567abcd.xbtterwg.xv">""")
@@ -214,6 +253,11 @@ class XmlBuilderTest {
     val sb = new java.lang.StringBuilder(2000)
     append(sb, state)
     sb.toString
+  }
+
+  @Benchmark
+  def javaBasedInterpolatorGenericAppend(state: Data): String = {
+    javaAppendXML(state)
   }
 
   @Benchmark
