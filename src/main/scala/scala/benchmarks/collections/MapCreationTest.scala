@@ -2,7 +2,7 @@ package scala.benchmarks.collections
 
 import java.util.concurrent.TimeUnit
 
-import org.openjdk.jmh.annotations.{Benchmark, BenchmarkMode, Mode, OutputTimeUnit, Param, Scope, Setup, State}
+import org.openjdk.jmh.annotations._
 
 import scala.benchmarks.collections.MapCreationTest.TestState
 import scala.collection.JavaConverters._
@@ -49,14 +49,20 @@ class ImmutableMapCreationTest {
   }
 
   @Benchmark
-  def usingBuildersReturnImmutable(state: TestState) = {
+  def foldFunctionalWay(state: TestState) = {
+    val value: Map[Int, Int] = state.seq.foldLeft(Map.empty[Int, Int])((acc, s) => acc + (s -> s))
+    value
+  }
+
+  @Benchmark
+  def usingMutableBuilders(state: TestState) = {
     val mutable = scala.collection.mutable.Map[Int, Int]()
     state.seq.foreach(id => mutable += (id -> id))
     mutable.toMap
   }
 
   @Benchmark
-  def usingJaveReturnImmutable(state: TestState) = {
+  def usingJavaReturnScala(state: TestState) = {
     val mutable = new java.util.HashMap[Int, Int](state.size)
     state.seq.foreach(id => mutable.put(id, id))
     mutable.asScala.toMap
