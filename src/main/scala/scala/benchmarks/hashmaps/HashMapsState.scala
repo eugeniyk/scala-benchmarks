@@ -53,6 +53,8 @@ object HashMapsState {
   class ScalaImmutableHashMapBenchmark extends HashMapBenchmark {
     val map: Map[String, String] = (1 to capacity).map(i => s"key$i" -> s"value$i").toMap
     val intMap: Map[Int, String] = (1 to capacity).map(i => i -> s"value$i").toMap
+
+    val emptyMap: Map[String, String] = Map.empty
   }
 
   @State(Scope.Benchmark)

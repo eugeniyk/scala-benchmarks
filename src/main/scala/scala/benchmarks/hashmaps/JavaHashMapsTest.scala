@@ -10,22 +10,22 @@ import scala.benchmarks.hashmaps.HashMapsState.JavaHashMapBenchmark
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 class JavaHashMapsTest {
   @Benchmark
-  def javaHashMapGetSuccess(state: JavaHashMapBenchmark): Unit = {
+  def javaHashMapGetSuccess(state: JavaHashMapBenchmark) = {
     state.map.get("key1")
   }
 
   @Benchmark
-  def javaHashMapGetFailure(state: JavaHashMapBenchmark): Unit = {
+  def javaHashMapGetFailure(state: JavaHashMapBenchmark) = {
     state.map.get("key0")
   }
 
   @Benchmark
-  def javaHashMapGetOrDefaultSuccess(state: JavaHashMapBenchmark): Unit = {
+  def javaHashMapGetOrDefaultSuccess(state: JavaHashMapBenchmark) = {
     state.map.getOrDefault("key1", "value0")
   }
 
   @Benchmark
-  def javaHashMapGetOrDefaultFailure(state: JavaHashMapBenchmark): Unit = {
+  def javaHashMapGetOrDefaultFailure(state: JavaHashMapBenchmark) = {
     state.map.getOrDefault("key0", "value0")
   }
 }

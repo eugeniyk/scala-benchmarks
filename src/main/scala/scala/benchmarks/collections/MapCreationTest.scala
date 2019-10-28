@@ -8,7 +8,8 @@ import scala.benchmarks.collections.MapCreationTest.TestState
 import scala.collection.JavaConverters._
 
 object MapCreationTest {
-  @State(Scope.Benchmark)class TestState() {
+  @State(Scope.Benchmark)
+  class TestState() {
     @Param(Array("10", "100", "1000"))
     var size: Int = _
 
@@ -85,7 +86,7 @@ class MutableMapCreationTest {
 
   @Benchmark
   def explicitBuilders(state: TestState) = {
-    val mutable = scala.collection.mutable.Map[Int, Int]()
+    val mutable = scala.collection.mutable.Map.empty[Int, Int]
     state.seq.foreach(id => mutable += (id -> id))
     mutable
   }
@@ -105,7 +106,7 @@ class MutableMapCreationTest {
   }
 
   @Benchmark
-  def usingJaveReturnMutableDecorator(state: TestState) = {
+  def usingJavaReturnMutableDecorator(state: TestState) = {
     val mutable = new java.util.HashMap[Int, Int](state.size)
     state.seq.foreach(id => mutable.put(id, id))
     mutable.asScala

@@ -9,22 +9,23 @@ import org.openjdk.jmh.annotations.{Benchmark, BenchmarkMode, Mode, OutputTimeUn
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 class ScalaImmutableHashMapsTest {
   @Benchmark
-  def scalaImmutableHashMapGetSuccess(state: ScalaImmutableHashMapBenchmark): Unit = {
+  def scalaImmutableHashMapGetSuccess(state: ScalaImmutableHashMapBenchmark) = {
     state.map.get("key1")
   }
 
   @Benchmark
-  def scalaImmutableHashMapGetFailure(state: ScalaImmutableHashMapBenchmark): Unit = {
+  def scalaImmutableHashMapGetFailure(state: ScalaImmutableHashMapBenchmark) = {
     state.map.get("key0")
   }
 
   @Benchmark
-  def scalaImmutableHashMapGetOrElseSuccess(state: ScalaImmutableHashMapBenchmark): Unit = {
+  def scalaImmutableHashMapGetOrElseSuccess(state: ScalaImmutableHashMapBenchmark) = {
     state.map.getOrElse("key1", "value0")
   }
 
   @Benchmark
-  def scalaImmutableHashMapGetOrElseFailure(state: ScalaImmutableHashMapBenchmark): Unit = {
+  def scalaImmutableHashMapGetOrElseFailure(state: ScalaImmutableHashMapBenchmark) = {
     state.map.getOrElse("key0", "value0")
   }
 }
+
