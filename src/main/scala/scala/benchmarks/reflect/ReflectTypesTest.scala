@@ -4,11 +4,11 @@ import java.util.concurrent.TimeUnit
 
 import org.openjdk.jmh.annotations._
 
-import scala.benchmarks.reflect.TypeTagsTestState.SimpleClass
+import scala.benchmarks.reflect.ReflectTypesTestState.SimpleClass
 import scala.reflect.ClassTag
 import scala.reflect.runtime.universe._
 
-object TypeTagsTestState {
+object ReflectTypesTestState {
   @State(Scope.Thread)
   class SimpleClass {}
 
@@ -29,9 +29,12 @@ object TypeTagsTestState {
   }
 }
 
+/**
+ * sbt "jmh:run -i 10 -wi 5 -f1 -t1 ReflectTypesTest -prof gc"
+ */
 @BenchmarkMode(Array(Mode.AverageTime))
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-class TypesTest {
+class ReflectTypesTest {
   @Benchmark
   def typeViaTypeTag() = {
     typeOf[SimpleClass].toString
@@ -44,21 +47,21 @@ class TypesTest {
 
   @Benchmark
   def getTypeByClassWithTypeTag(state: SimpleClass) = {
-    TypeTagsTestState.getTypeByClass(state)
+    ReflectTypesTestState.getTypeByClass(state)
   }
 
   @Benchmark
   def getTypeByTypeOf(state: SimpleClass) = {
-    TypeTagsTestState.getTypeByTypeOf(state)
+    ReflectTypesTestState.getTypeByTypeOf(state)
   }
 
   @Benchmark
   def getTypeByClassTag(state: SimpleClass) = {
-    TypeTagsTestState.getTypeByClassTag[SimpleClass]
+    ReflectTypesTestState.getTypeByClassTag[SimpleClass]
   }
 
   @Benchmark
   def getTypeWithoutTypeTag(state: SimpleClass) = {
-    TypeTagsTestState.getTypeByInstance(state)
+    ReflectTypesTestState.getTypeByInstance(state)
   }
 }
