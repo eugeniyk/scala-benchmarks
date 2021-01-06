@@ -1,7 +1,7 @@
 name := "scala-benchmarks"
 
 organization := "eugenek"
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.12"
 
 enablePlugins(JmhPlugin)
 

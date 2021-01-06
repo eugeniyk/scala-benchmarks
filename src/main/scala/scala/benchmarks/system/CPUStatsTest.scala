@@ -21,7 +21,12 @@ object CPUStatsTest {
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 class CPUStatsTest {
   @Benchmark
-  def getCPUStats(state: CPUStatsTest.JMXBean) = {
+  def getCPULoad(state: CPUStatsTest.JMXBean) = {
     state.osBean.getProcessCpuLoad
+  }
+
+  @Benchmark
+  def getCPUTime(state: CPUStatsTest.JMXBean) = {
+    state.osBean.getProcessCpuTime
   }
 }
